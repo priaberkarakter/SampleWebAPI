@@ -1,0 +1,62 @@
+﻿.text-box[readonly], .text-box[readonly]:hover {
+    background-color: #eee;
+    opacity: 1;
+    cursor: not-allowed;
+}
+
+/*calendar table color*/
+.bordered {
+    border: 1px solid #ddd;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px;
+}
+table.calendar tbody tr td {
+    font-size: 18pt;
+    font-weight: bold;
+    text-align: right;
+    cursor: pointer;
+}
+
+    table.calendar tbody tr td i {
+        margin-top: -32px;
+        font-size: x-small;
+        color: #373737;
+    }
+
+    table.calendar tbody tr td.inactive {
+        background-color: #f0f0f0;
+        font-size: inherit;
+        font-weight: normal;
+    }
+
+    table.calendar thead tr th.holiday,
+    table.calendar tbody tr td.holiday {
+        color: #ff3333;
+    }
+
+    table.calendar tbody tr td.selected {
+        background-color: #f8a406;
+    }
+
+/*button color*/
+.workingdays button.active {
+    color: #ff3333;
+}
+
+.red {
+    background-color: #ff6868;
+    color: #ffffff;
+}
+
+.blue {
+    background-color: #4286f4;
+    color: #ffffff;
+}

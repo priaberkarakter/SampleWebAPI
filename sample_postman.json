@@ -1,0 +1,85 @@
+{
+	"info": {
+		"_postman_id": "70689037-4314-4933-bd83-b1a7edd32b68",
+		"name": "VendorProd",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Request Token",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "client_id",
+							"value": "vof",
+							"type": "text"
+						},
+						{
+							"key": "grant_type",
+							"value": "password",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "scope",
+							"value": "email roles profile",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": "https://ieiappslogin-dev.epson.biz/auth/realms/epson-api/protocol/openid-connect/token"
+			},
+			"response": []
+		},
+		{
+			"name": "Stock",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer [TOKEN]"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"stocks\" : \n    [\n        {\n            \"as_of_date_time\": \"2020-06-25T00:00:00.000Z\",\n            \"part_code\" : \"172618602\",\n            \"plant\" : \"Plant1\",\n            \"storage_location\" : \"WH\",\n            \"available_stock\" : 20,\n            \"blocked_stock\" : 1,\n            \"last_modified\" : \"2020-06-25T00:00:00.000Z\"\n        }\n    ]\n}\n"
+				},
+				"url": "https://ieiapps-dev.epson.biz/vof/api/v1/Stock"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Customer",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		}
+	]
+}
